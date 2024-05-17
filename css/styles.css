@@ -189,3 +189,26 @@ figcaption{
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 0.1rem;
 }
+
+footer {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    padding: 1rem;
+}
+
+footer ul li{
+    list-style: none;
+    margin: 0.5rem;
+}
+
+footer h3{
+    padding: 1rem;
+
+}
+
+@media (max-width: 500px) {
+    footer {
+      flex-direction: column;
+    }
+  }

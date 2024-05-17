@@ -96,6 +96,12 @@ main{
     text-align: center;
 }
 
+.topPeliculas {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    font-size: 210%;
+}
+
 /*texto o imagnes*/
 #imagenRandom{
     width: 40%;

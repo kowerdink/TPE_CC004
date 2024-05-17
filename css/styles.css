@@ -211,4 +211,23 @@ footer h3{
     footer {
       flex-direction: column;
     }
-  }
+}
+
+
+@media (min-width: 900px) {
+    .div-form form {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .div-form form {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1300px) {
+    .div-form form {
+        width: 40%;
+    }
+}

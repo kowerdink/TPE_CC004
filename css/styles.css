@@ -14,14 +14,53 @@ main{
     display: block;
 }
 
+header {
+    width: 100%;
+    margin-bottom: 1.3rem;
+    background-color: #171717;
+}
 
-#logo > img, #nombreLogo{ 
-    width: 5%;
-    height: 5%;
-    margin: 0%;
+header >#logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+}
+
+h2{
+    font-size: 2.1rem;
+    font-weight: 750;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    color: rgba(201, 201, 201, 0.905);
+    font-family: 'Courier New', Courier, monospace;
+}
+main > p {
     color: white;
-    border-color: transparent;
-    background-color: transparent;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+    margin-left: 2rem;
+    border-radius: 9px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(223, 157, 3);
+    width: 17%;
+}
+
+header > #logo > h1 {
+    margin-left: 30%;
+    text-transform: uppercase;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 900;
+}
+
+#logo > img{ 
+    width: 10%;
+    border-radius: 50%;
 }
 
 /* ----- NAVBAR ----- */
@@ -34,37 +73,87 @@ main{
 
 }
 
-.nav {
+#nav {
     display: flex;
-    justify-content: space-between;
-    width: 90%;
-    font-size: 1.3rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    justify-content: center;
+    width: 100%;  
 }
 
 .nav-ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 50%;
-    list-style: none;
-    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
 }
 
 
-.nav-ul li {
-    padding: 0.9rem;
+.nav-ul li{
+    width: 100%;
+    padding: 3%;
+    font-size: 80%;
+    font-family: Tahoma, sans-serif, 'Times New Roman', serif;
+    list-style: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.nav-ul li >a {
+    text-decoration: none;
+    width: 20%;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 600;
 }
 
 .nav-ul li:hover {
-    color: white;
     background-color: rgba(0, 232, 162, 0.774);
 }
 
-.nav-ul li > a {
-    text-decoration: none;
+.nav-ul li >a:hover {
+    color: rgb(255, 132, 0);
 }
 
+/* Hamburguesa hidden */
+.menu-icon {
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+    z-index: 2;
+}
+.menu-toggle {
+    display: none;
+    z-index: 2;
+}
+/* Muestra el Menu:  on click */
+.menu-toggle:checked ~ nav {
+    display: flex;
+
+}
+/* Cruz icon hidden */
+#label2 {
+    display: none;
+}
+/* Oculta el icon Hamburguesa */
+.menu-toggle:checked ~ #label{
+    opacity: 0;
+}
+/* Muestra el Icono de cruz de cerrar */
+.menu-toggle:checked ~ #label2{
+    display: block;
+}
+.flex {
+    display: flex;
+    top: 0;
+    right: 0;
+}
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        z-index: 1;
+        transition: right 0.3s ease;
+    }
+}
 /* ----- ----- ----- */
 
 
@@ -98,9 +187,11 @@ main{
 
 .topPeliculas {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     font-size: 1.7rem;
     padding: 3rem;
+    background-color: #134a4f;
+    margin-bottom: 4rem;
 }
 
 /*texto o imagnes*/
@@ -121,15 +212,17 @@ figure > img{
     height: 90%;
     border: 8px solid white;
     border-radius: 8px;
+    ;
 }
 img {
     border: 4px solid transparent; 
     transition: border-color 0.3s;
 }
 img:hover {
-    border: 8px solid rgba(0, 255, 179, 0.862);
+    border: 8px solid rgba(0, 121, 62, 0.771);
     cursor: pointer;
 }
+
 figcaption{
     text-decoration-line: underline;
 }

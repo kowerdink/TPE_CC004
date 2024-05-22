@@ -6,8 +6,11 @@
     margin: 0;
 }
 
-body{
-    background-color: rgb(45, 45, 45);
+.bodyOscuro{
+    background-color: rgb(22, 22, 22);
+}
+.bodyCalido{
+    background-color: white;
 }
 
 main{
@@ -16,24 +19,24 @@ main{
 
 header {
     width: 100%;
-    margin-bottom: 1.3rem;
-    background-color: #171717;
+    margin-bottom: 1.5%;
+    background-color: #000000;
 }
 
 header >#logo{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 1rem;
+    padding: 0.5%;
 }
 
 h2{
     font-size: 2.1rem;
     font-weight: 750;
     text-align: center;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    color: rgba(201, 201, 201, 0.905);
+    padding: 2%;
+    margin-bottom: 2%;
+    color: rgb(40, 232, 101);
     font-family: 'Courier New', Courier, monospace;
 }
 main > p {
@@ -42,16 +45,15 @@ main > p {
     font-size: 1.5rem;
     text-transform: uppercase;
     text-align: center;
-    padding: 1rem;
-    margin-left: 2rem;
+    padding: 1%;
+    margin-left: 2%;
     border-radius: 9px;
     font-family: Georgia, Times, 'Times New Roman', serif;
-    background-color: rgb(223, 157, 3);
+    background-color: rgba(0, 232, 162, 0.774);
     width: 17%;
 }
 
 header > #logo > h1 {
-    margin-left: 30%;
     text-transform: uppercase;
     font-family: 'Arial Narrow Bold', sans-serif;
     letter-spacing: 5px;
@@ -90,7 +92,7 @@ header > #logo > h1 {
 
 .nav-ul li{
     width: 100%;
-    padding: 3%;
+    padding: 1.5%;
     font-size: 80%;
     font-family: Tahoma, sans-serif, 'Times New Roman', serif;
     list-style: none;
@@ -111,8 +113,9 @@ header > #logo > h1 {
 }
 
 .nav-ul li >a:hover {
-    color: rgb(255, 132, 0);
+    color: #134a4f;
 }
+
 
 /* Hamburguesa hidden */
 .menu-icon {
@@ -154,11 +157,11 @@ header > #logo > h1 {
         transition: right 0.3s ease;
     }
 }
+
 /* ----- ----- ----- */
 
-
 .barraDePeliculas, #peliculaRandom{
-    background-color: rgba(69, 69, 69, 0.611);
+   background-color: rgb(45, 45, 45);  
     margin-bottom: 3%;
     border-radius: 9px;
     padding: 1rem;
@@ -190,10 +193,16 @@ header > #logo > h1 {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     font-size: 1.7rem;
     padding: 3rem;
-    background-color: #134a4f;
-    margin-bottom: 4rem;
+    background-color: rgb(45, 45, 45);   
+    margin: 5%;
 }
 
+/*boton calido o oscuro*/
+#botonCalidoOscuro{
+    background-color: rgb(0, 255, 115);
+    border-radius: 3px;
+    padding: 1%;
+}
 /*texto o imagnes*/
 #imagenRandom{
     width: 40%;
@@ -202,15 +211,21 @@ header > #logo > h1 {
 figure{
     margin: 0%;
 }
-h1, figcaption, p{
+h1, p{
+    text-align: center ;
     color: rgb(40, 232, 101);
-    margin: 1%;
+    margin: 2%;
+
+}
+#verdaderoOFalso{
+    color: rgb(43, 255, 0);
+
 }
 figure > img{
     border-radius: 8px;
     width: 80%;
     height: 90%;
-    border: 8px solid white;
+    border: 5px solid white;
     border-radius: 8px;
     ;
 }
@@ -219,11 +234,17 @@ img {
     transition: border-color 0.3s;
 }
 img:hover {
-    border: 8px solid rgba(0, 121, 62, 0.771);
+    border-color:  rgb(40, 232, 101);
     cursor: pointer;
 }
-
-figcaption{
+#logo > img, #nombreLogo{
+    height: 5%;
+    margin: 0%;
+    border-color: transparent;
+    background-color: transparent;
+}
+time{
+    color: white;
     text-decoration-line: underline;
 }
 
@@ -235,9 +256,10 @@ figcaption{
     align-items: center;
     color: black;
     font-size: 1rem;
-    background-color: rgba(0, 85, 78, 0.355);
+    background-color: rgb(45, 45, 45);  
     color: rgb(255, 255, 255);
     padding: 1rem;
+    margin: 1%;
 }
 
 .div-form form {
@@ -280,7 +302,7 @@ figcaption{
 }
 
 .div-form form button {
-    background-color: rgba(68, 170, 137, 0.673);
+    background-color: rgba(3, 253, 115, 0.673);
     color: aliceblue;
     padding: 1rem;
     border: none;
@@ -291,7 +313,25 @@ figcaption{
     letter-spacing: 0.1rem;
 }
 
+/*tabla de contactos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+th, td {
+    border: 1px solid rgb(145, 145, 145);
+    padding: 8px;
+    text-align: left;
+}
+thead {
+    background-color: rgb(231, 231, 231);
+}
+/*footer*/
 footer {
+    background-color: rgb(0, 0, 0);
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     display: flex;
@@ -304,16 +344,29 @@ footer ul li{
 }
 
 footer h3{
+    color:   rgb(40, 232, 101);;
     padding: 1rem;
 
 }
 
+/*disenio responsive*/
+@media only screen and (max-width: 600px) {
+    article{
+        display: block;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+    nav{
+        width: auto;
+    }
+}
 @media (max-width: 500px) {
     footer {
       flex-direction: column;
     }
 }
-
 
 @media (min-width: 900px) {
     .div-form form {
